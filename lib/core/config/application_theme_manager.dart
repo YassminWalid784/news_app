@@ -12,10 +12,7 @@ class ApplicationThemeManager {
           bottomRight: Radius.circular(35),
         ),
       ),
-      iconTheme: IconThemeData(
-        color: Colors.white,
-        size: 35
-      ),
+      iconTheme: IconThemeData(color: Colors.white, size: 35),
       centerTitle: true,
     ),
     textTheme: const TextTheme(

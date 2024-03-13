@@ -6,8 +6,14 @@ import '../../../core/config/constants.dart';
 import '../../../models/category_model.dart';
 import '../widget/custom_item_widget.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   HomeView({super.key});
+
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
+
+class _HomeViewState extends State<HomeView> {
   List<CategoryModel> categoriesList = [
     const CategoryModel(
         id: 'sports',
@@ -40,12 +46,13 @@ class HomeView extends StatelessWidget {
         image: 'assets/images/science_icn.png',
         backgroundColor: Color(0xFFF2D352)),
   ];
+
   @override
   Widget build(BuildContext context) {
     return CustomBackgroundWidget(
       child: Scaffold(
         appBar: AppBar(
-          leadingWidth: 100,
+          leadingWidth: 80,
           title: Text(
             "News App",
             style: Constants.theme.textTheme.titleLarge,
@@ -71,8 +78,8 @@ class HomeView extends StatelessWidget {
                       const EdgeInsets.symmetric(vertical: 25, horizontal: 20),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
-                    mainAxisSpacing: 15,
-                    crossAxisSpacing: 15,
+                    mainAxisSpacing: 20,
+                    crossAxisSpacing: 20,
                     childAspectRatio: 4 / 5,
                   ),
                   itemBuilder: (context, index) => CustomItemWidget(
