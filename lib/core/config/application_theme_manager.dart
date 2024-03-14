@@ -17,7 +17,7 @@ class ApplicationThemeManager {
     ),
     textTheme: const TextTheme(
       titleLarge: TextStyle(
-        fontFamily: "Exo",
+         fontFamily: "Exo",
         fontWeight: FontWeight.bold,
         fontSize: 24,
         color: Colors.white,

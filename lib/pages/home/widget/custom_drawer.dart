@@ -4,7 +4,8 @@ import 'package:news_app/core/config/pages_route_name.dart';
 import 'package:news_app/main.dart';
 
 class CustomDrawer extends StatelessWidget {
-  const CustomDrawer({super.key});
+  Function onCategoryDrawerTap;
+  CustomDrawer({super.key, required this.onCategoryDrawerTap});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,9 @@ class CustomDrawer extends StatelessWidget {
             ),
           ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              onCategoryDrawerTap();
+            },
             child: Padding(
               padding: const EdgeInsets.only(
                 left: 15,

@@ -16,7 +16,7 @@ class Routes {
 
       case PagesRouteName.homeView:
         return MaterialPageRoute(
-          builder: (context) =>  HomeView(),
+          builder: (context) =>  const HomeView(),
           settings: settings,
         );
 
