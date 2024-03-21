@@ -16,42 +16,42 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   List<CategoryModel> categoriesList = [
-    const CategoryModel(
+    CategoryModel(
         id: 'sports',
         title: 'Sports',
         image: 'assets/images/sports_icn.png',
-        backgroundColor: Color(0xFFC91C22)),
-    const CategoryModel(
+        backgroundColor: const Color(0xFFC91C22)),
+    CategoryModel(
         id: 'general',
         title: 'Politics',
         image: 'assets/images/politics_icn.png',
-        backgroundColor: Color(0xFF003E90)),
-    const CategoryModel(
+        backgroundColor: const Color(0xFF003E90)),
+    CategoryModel(
         id: 'health',
         title: 'Health',
         image: 'assets/images/health_icn.png',
-        backgroundColor: Color(0xFFED1E79)),
-    const CategoryModel(
+        backgroundColor: const Color(0xFFED1E79)),
+    CategoryModel(
         id: 'business',
         title: 'Business',
         image: 'assets/images/business_icn.png',
-        backgroundColor: Color(0xFFCF7E48)),
-    const CategoryModel(
+        backgroundColor: const Color(0xFFCF7E48)),
+    CategoryModel(
         id: 'environment',
         title: 'Environment',
         image: 'assets/images/environment_icn.png',
-        backgroundColor: Color(0xFF4882CF)),
-    const CategoryModel(
+        backgroundColor: const Color(0xFF4882CF)),
+    CategoryModel(
         id: 'science',
         title: 'Science',
         image: 'assets/images/science_icn.png',
-        backgroundColor: Color(0xFF2E83FA)),
+        backgroundColor: const Color(0xFFF2D352)),
 
-    const CategoryModel(
-        id: 'technology',
-        title: 'Technology',
-        image: 'assets/images/tech.jpeg',
-        backgroundColor: Color(0xFF2576FE)),
+    // const CategoryModel(
+    //     id: 'technology',
+    //     title: 'Technology',
+    //     image: 'assets/images/tech.jpeg',
+    //     backgroundColor: Color(0xFF2576FE)),
   ];
 
   @override
@@ -114,9 +114,10 @@ class _HomeViewState extends State<HomeView> {
   CategoryModel? selectCategory;
 
   void onCategoryClicked(CategoryModel categoryModel) {
-    selectCategory = categoryModel;
-    print(categoryModel.id);
-    setState(() {});
+    // print(categoryModel.id);
+    setState(() {
+      selectCategory = categoryModel;
+    });
   }
 
   void onDrawerCategoryClicked() {

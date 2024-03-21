@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/core/config/pages_route_name.dart';
+import 'package:news_app/pages/home/pages/article_detials_view.dart';
 import 'package:news_app/pages/home/pages/home_view.dart';
 import 'package:news_app/pages/settings/pages/settings_view.dart';
 import 'package:news_app/pages/splash/pages/splash_view.dart';
@@ -23,6 +24,11 @@ class Routes {
       case PagesRouteName.settingsView:
         return MaterialPageRoute(
           builder: (context) => const SettingsView(),
+          settings: settings,
+        );
+      case PagesRouteName.articleDetailsView:
+        return MaterialPageRoute(
+          builder: (context) => const ArticleDetailsView(),
           settings: settings,
         );
 

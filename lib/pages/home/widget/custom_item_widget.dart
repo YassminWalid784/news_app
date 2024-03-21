@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:news_app/core/config/constants.dart';
 import '../../../models/category_model.dart';
 
-
 typedef OnCategoryClicked = void Function(CategoryModel)?;
+
 class CustomItemWidget extends StatelessWidget {
   final int index;
   final CategoryModel categoryModel;
   final OnCategoryClicked onCategoryClicked;
-   const CustomItemWidget({
+
+
+  const CustomItemWidget({
     super.key,
     required this.index,
     required this.categoryModel,
@@ -19,7 +21,7 @@ class CustomItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        if(onCategoryClicked ==null) return;
+        if (onCategoryClicked == null) return;
         onCategoryClicked!(categoryModel);
       },
       child: Container(
