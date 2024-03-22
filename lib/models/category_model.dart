@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class CategoryModel {
-
   final String id;
   final String title;
   final String image;
@@ -13,5 +12,4 @@ class CategoryModel {
     required this.image,
     required this.backgroundColor,
   });
-
 }

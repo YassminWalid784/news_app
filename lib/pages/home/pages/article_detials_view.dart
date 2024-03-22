@@ -10,11 +10,13 @@ class ArticleDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     var args = ModalRoute.of(context)!.settings.arguments as ArticleDataModel;
+
     return CustomBackgroundWidget(
       child: Scaffold(
         appBar: AppBar(
-          actions: const [
+          actions: [
             SizedBox(width: 50,),
             Icon(Icons.arrow_back),
             Spacer(),
@@ -23,10 +25,10 @@ class ArticleDetailsView extends StatelessWidget {
           //   "News Detail"
           // ),
         ),
-        drawer: CustomDrawer(onCategoryDrawerTap: () {}),
+        drawer: CustomDrawer( onCategoryDrawerTap: () {},),
         body: Column(
           children: [
-            SizedBox(
+            Container(
               width: Constants.mediaQuery.width,
               height: 90,
 

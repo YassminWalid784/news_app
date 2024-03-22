@@ -59,18 +59,32 @@ class _HomeViewState extends State<HomeView> {
     return CustomBackgroundWidget(
       child: Scaffold(
         appBar: AppBar(
-          leadingWidth: 80,
           title: Text(
             selectCategory == null ? "News App" : selectCategory!.title,
             style: Constants.theme.textTheme.titleLarge,
           ),
+          actions: [
+            if (selectCategory != null)
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: const Icon(
+                    Icons.search_rounded,
+                    size: 45,
+                    color: Colors.white,
+                  ),
+                ),
+              )
+          ],
+          leadingWidth: 80,
         ),
         drawer: CustomDrawer(
           onCategoryDrawerTap: onDrawerCategoryClicked,
         ),
         body: selectCategory == null
             ? Padding(
-                padding: const EdgeInsets.all(30.0),
+                padding: const EdgeInsets.all(20.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [

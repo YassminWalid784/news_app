@@ -2,10 +2,12 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:news_app/core/config/constants.dart';
 import 'package:news_app/models/source_model.dart';
-import '../models/ArticleDataModel.dart';
+
+import '../../../models/ArticleDataModel.dart';
+
 
 class ApiManager {
-  static Future<List<SourceModel>> fetchDataSources(String categoryId) async {
+   Future<List<SourceModel>> fetchDataSources(String categoryId) async {
     Map<String, dynamic> queryParameter = {
       "apiKey": Constants.apiKey,
       "category": categoryId
@@ -39,16 +41,13 @@ class ApiManager {
     }
   }
 
-  static Future<List<ArticleDataModel>> fetchDataArticles(String sourceId) async {
+   Future<List<ArticleDataModel>> fetchDataArticles(
+      String sourceId) async {
     Map<String, dynamic> queryParameter = {
       "apiKey": Constants.apiKey,
       "sources": sourceId,
     };
-    var url = Uri.https(
-        Constants.baseUrl,
-        "/v2/everything",
-        queryParameter
-    );
+    var url = Uri.https(Constants.baseUrl, "/v2/everything", queryParameter);
     // http.get(Uri.parse("https://newsapi.org/v2/top-headlines?sources=$sourceId&apiKey=${Constants.apiKey}"));
 
     final response = await http.get(url);

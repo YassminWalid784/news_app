@@ -6,18 +6,17 @@ import 'package:news_app/pages/settings/pages/settings_view.dart';
 import 'package:news_app/pages/splash/pages/splash_view.dart';
 
 class Routes {
-  static Route<dynamic>onGenerateRoute(RouteSettings settings) {
+  static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
       case PagesRouteName.initial:
         return MaterialPageRoute(
           builder: (context) => const SplashView(),
-          // pass settings incase i sent an argument
           settings: settings,
         );
 
       case PagesRouteName.homeView:
         return MaterialPageRoute(
-          builder: (context) =>  const HomeView(),
+          builder: (context) => const HomeView(),
           settings: settings,
         );
 
@@ -26,6 +25,7 @@ class Routes {
           builder: (context) => const SettingsView(),
           settings: settings,
         );
+
       case PagesRouteName.articleDetailsView:
         return MaterialPageRoute(
           builder: (context) => const ArticleDetailsView(),
@@ -35,6 +35,7 @@ class Routes {
       default:
         return MaterialPageRoute(
           builder: (context) => const SplashView(),
+          settings: settings,
         );
     }
   }

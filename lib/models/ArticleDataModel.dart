@@ -32,3 +32,57 @@ class ArticleDataModel {
     content: json["content"] ?? "",
   );
 }
+
+// class ArticleDataModel {
+//   String? status;
+//   List<Articles>? articles;
+//
+//
+//   ArticleDataModel({
+//     this.status,
+//     this.articles,
+//   });
+//
+//   ArticleDataModel.fromJson(dynamic json){
+//     status = json['status'];
+//     if (json['articles'] != null) {
+//       articles = [];
+//       json['articles'].forEach((v) {
+//         articles?.add(Articles.fromJson(v));
+//       });
+//     }
+//   }
+// }
+//
+// class Articles {
+//   SourceModel? source;
+//   String? author;
+//   String? title;
+//   String? description;
+//   String? url;
+//   String? urlToImage;
+//   String? publishedAt;
+//    String? content;
+//
+//   Articles({
+//     this.source,
+//     this.author,
+//     this.title,
+//     this.description,
+//     this.url,
+//     this.urlToImage,
+//     this.publishedAt,
+//     this.content,
+//   });
+//
+//   Articles.fromJson(dynamic json) {
+//      source:SourceModel.formJson(json["source"]);
+//      author: json["author"] ?? "",
+//      title: json["title"] ?? "",
+//      description: json["description"] ?? "",
+//      url: json["url"] ?? "",
+//      urlToImage: json["urlToImage"] ?? "",
+//      publishedAt: json["publishedAt"] ?? "",
+//      content: json["content"] ??"",
+//    }
+// }
